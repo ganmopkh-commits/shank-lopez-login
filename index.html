@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHANK LOPEZ - ระบบล็อกอิน</title>
+    <!-- เรียกใช้งานฟอนต์ Kanit จาก Google Fonts ให้ตัวหนังสือสวยงาม -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        body {
+            /* ภาพพื้นหลังวิวทะเลตอนพระอาทิตย์ตก */
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* กล่องฟอร์มแบบกระจกใส (Glassmorphism) */
+        .login-card {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 40px 30px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .login-card h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-card p {
+            font-size: 14px;
+            color: #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 14px 15px 14px 45px;
+            background: rgba(255, 255, 255, 0.85);
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-size: 15px;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            background: #ffffff;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        /* ไอคอนจำลองด้านหน้าช่องกรอก */
+        .input-group span {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #2b5876, #4e4376);
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            color: #white;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: opacity 0.3s ease, transform 0.1s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+        }
+
+        .btn-login:hover {
+            opacity: 0.9;
+        }
+
+        .btn-login:active {
+            transform: scale(0.98);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        .card-footer a {
+            color: #ffffff;
+            text-decoration: none;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            transition: text-decoration 0.2s;
+        }
+
+        .card-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <h2>SHANK LOPEZ</h2>
+        <p>เข้าสู่ระบบเพื่อเข้าถึงข้อมูลของคุณ</p>
+        
+        <form>
+            <div class="input-group">
+                <span>👤</span>
+                <input type="text" placeholder="ชื่อผู้ใช้ หรือ อีเมล" required>
+            </div>
+            
+            <div class="input-group">
+                <span>🔒</span>
+                <input type="password" placeholder="รหัสผ่าน" required>
+            </div>
+            
+            <button type="submit" class="btn-login">เข้าสู่ระบบ</button>
+        </form>
+
+        <div class="card-footer">
+            <a href="#">ลืมรหัสผ่าน?</a>
+            <a href="#">สมัครสมาชิก</a>
+        </div>
+    </div>
+
+</body>
+</html>
